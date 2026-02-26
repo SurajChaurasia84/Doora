@@ -1,0 +1,38 @@
+name: taskflow_pro
+description: A production-ready task management Flutter application.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_riverpod: ^2.6.1
+  dio: ^5.9.0
+  go_router: ^14.8.1
+  intl: ^0.20.2
+  flutter_secure_storage: ^9.2.4
+  shared_preferences: ^2.5.3
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+  equatable: ^2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.15
+  json_serializable: ^6.9.5
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/icon.png
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
