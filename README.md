@@ -13,7 +13,7 @@ A production-style Flutter Task Management / Productivity app.
 - Token storage using `flutter_secure_storage`
 - Local task caching using `shared_preferences`
 - Light/Dark theme with smooth transition
-- Android launcher shortcut: `Add Task` (long-press app icon)
+- Android launcher shortcut: `Create a new task` (long-press app icon)
 - Basic unit test for validation module
 
 ## Setup Instructions
@@ -116,11 +116,11 @@ How it is used here:
 
 Doora supports a static Android app shortcut:
 
-- Shortcut name: `Add Task`
+- Shortcut name: `Create a new task`
 - Trigger: long-press app icon on home screen/app drawer (launcher support dependent)
 - Action: opens the app and navigates to task creation screen
 
-Implementation flow (same pattern as Gyanika):
+Implementation flow:
 
 1. Static shortcut defined in Android XML:
    - `android/app/src/main/res/xml/shortcuts.xml`
