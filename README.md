@@ -13,6 +13,7 @@ A production-style Flutter Task Management / Productivity app.
 - Token storage using `flutter_secure_storage`
 - Local task caching using `shared_preferences`
 - Light/Dark theme with smooth transition
+- Android launcher shortcut: `Add Task` (long-press app icon)
 - Basic unit test for validation module
 
 ## Setup Instructions
@@ -110,3 +111,20 @@ How it is used here:
 
 - `reqres.in` is a mock auth API; registration works for supported test users only.
 - User-created tasks are persisted locally and merged with remote task data.
+
+## Android Launcher Shortcut
+
+Doora supports a static Android app shortcut:
+
+- Shortcut name: `Add Task`
+- Trigger: long-press app icon on home screen/app drawer (launcher support dependent)
+- Action: opens the app and navigates to task creation screen
+
+Implementation flow (same pattern as Gyanika):
+
+1. Static shortcut defined in Android XML:
+   - `android/app/src/main/res/xml/shortcuts.xml`
+2. Shortcut metadata attached in launcher activity:
+   - `android/app/src/main/AndroidManifest.xml`
+3. Native Android receives shortcut intent extra (`target_action`) in `MainActivity` and forwards via `MethodChannel`
+4. Flutter `ShortcutNavigationService` receives/queues action and `HomeScreen` opens `/task-form`
