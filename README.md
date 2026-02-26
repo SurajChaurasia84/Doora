@@ -1,4 +1,4 @@
-# Dooro
+# Doora
 
 A production-style Flutter Task Management / Productivity app.
 
